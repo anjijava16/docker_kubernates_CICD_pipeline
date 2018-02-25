@@ -9,3 +9,16 @@
 4)
 
 buckyroberts
+
+
+https://github.com/anjijava16/DockerSetup.git
+
+
+git clone https://github.com/anjijava16/DockerSetup.git
+
+git add fileName
+
+git commit -m 'first version of code'
+
+
+ 
