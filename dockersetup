@@ -1,0 +1,113 @@
+ sudo apt-get update
+ 
+wget -qO- https://get.docker.com/ | sh
+
+
+wget -qO- https://get.docker.com/ | sudo apt-key add -
+
+
+docker run hello-world
+
+sudo docker
+
+which docker
+
+sudo docker run hello-world
+
+
+docker run java-app  
+
+mkdir  java-docker-app
+
+class Hello{  
+public static void main(String[] args){  
+System.out.println("This is java app \n by using Docker");  
+}  
+}  
+
+Dockerfile
+
+FROM java:8  
+COPY . /var/www/java  
+WORKDIR /var/www/java  
+RUN javac Hello.java  
+CMD ["java", "Hello"]  
+ 
+2 Files Hello.java and Dockerfile
+
+
+3)  docker build -t java-app .  
+ 
+ 4)docker run java-app  
+ 
+ 5)docker images
+ 
+ 6)sudo docker tag java-app anjaiahspr/java-app
+ 
+ 7) sudo docker push anjaiahspr/java-app
+ 
+ 8) sudo docker pull anjaiahspr/welcomedocker
+     sudo docker run java-app
+    sudo docker tag java-app anjaiahspr/java-app
+    sudo docker push anjaiahspr/java-app
+    sudo docker pull anjaiahspr/welcomedocker
+    sudo docker images
+    sudo docker ps -ls
+    sudo docker ps -l
+    sudo docker ps -a
+docker stop container_id  
+sudo docker rmi java
+
+
+ubuntu@ip-172-31-18-130:~/java-docker-app-anjijava16$ sudo docker info
+Containers: 6
+ Running: 0
+ Paused: 0
+ Stopped: 6
+Images: 6
+Server Version: 18.02.0-ce
+Storage Driver: overlay2
+ Backing Filesystem: extfs
+ Supports d_type: true
+ Native Overlay Diff: true
+Logging Driver: json-file
+Cgroup Driver: cgroupfs
+Plugins:
+ Volume: local
+ Network: bridge host macvlan null overlay
+ Log: awslogs fluentd gcplogs gelf journald json-file logentries splunk syslog
+Swarm: inactive
+Runtimes: runc
+Default Runtime: runc
+Init Binary: docker-init
+containerd version: 9b55aab90508bd389d7654c4baf173a981477d55
+runc version: 9f9c96235cc97674e935002fc3d78361b696a69e
+init version: 949e6fa
+Security Options:
+ apparmor
+ seccomp
+  Profile: default
+Kernel Version: 4.4.0-1049-aws
+Operating System: Ubuntu 16.04.3 LTS
+OSType: linux
+Architecture: x86_64
+CPUs: 1
+Total Memory: 990.8MiB
+Name: ip-172-31-18-130
+ID: Q65A:D5AS:6JJB:UA7K:W2VE:6L4F:MBZA:7B52:XLKU:G5MM:T5SP:KM7K
+Docker Root Dir: /var/lib/docker
+Debug Mode (client): false
+Debug Mode (server): false
+Username: anjaiahspr
+Registry: https://index.docker.io/v1/
+Labels:
+Experimental: false
+Insecure Registries:
+ 127.0.0.0/8
+Live Restore Enabled: false
+
+WARNING: No swap limit support
+ubuntu@ip-172-31-18-130:~/java-docker-app-anjijava16$ 
+
+
+ 

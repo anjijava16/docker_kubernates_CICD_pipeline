@@ -1,0 +1,100 @@
+- docker version
+	two section client and server. server is always linux
+
+- docker info
+	displays key/value pair of docker details. Like Number of containers, name etc
+
+- docker info |grep Name
+	displays the name of the machine connected
+
+- docker images
+	displays the images available. The following are the details shown
+	repository	tag	image id	created	size
+
+- docker containers ls
+	displays the containers. The following are the details shown
+	container id	image	command	created	status	ports	names
+
+- docker-machine ls
+	displays the details about the docker machine available in the system
+	name	active	driver		state		url		swarm	docker	errors
+	default	*	virtualbox	running		tcp://ip:2376		v18.02.0-ce
+	
+	here docker column represents the version of the server/engine
+
+- docker-machine env
+	export DOCKER_TLS_VERIFY="1"
+	export DOCKER_HOST="tcp://192.168.99.100:2376"
+	export DOCKER_CERT_PATH="C:\Users\hp\.docker\machine\machines\default"
+	export DOCKER_MACHINE_NAME="default"
+	export COMPOSE_CONVERT_WINDOWS_PATHS="true"
+	# Run this command to configure your shell:
+	# eval $("C:\Program Files\Docker Toolbox\docker-machine.exe" env)
+
+- docker container prune
+	deletes all the container instances that are not running or in stopped condition
+
+- docker container <container_name> stop
+	stops a running container identified by a given name
+
+- docker container <container_name> start
+	starts a container identified by a given name
+
+- docker-machine create --driver <virtual_platform> <machine_name>
+	- This command creates new docker machine with the given virtual platform
+	- You also have to mention the machine name
+	- In Windows the dockertoolbox comes with virtual platform virtualbox
+
+   docker-machine create --driver virtualbox aspire-machine-practice
+
+   Once the docker-machine is created you can see the docker-machine details in your Windows
+   Operating System: c:\users\hp\.docker\machine\machines\aspire-machine-practice\boot2docker.iso
+
+Running pre-create checks...
+Creating machine...
+(aspire-machine-practice) Copying C:\Users\hp\.docker\machine\cache\boot2docker.iso to C:\Users\hp\.docker\machine\machines\aspire-machine-practice\boot2docker.iso...
+(aspire-machine-practice) Creating VirtualBox VM...
+(aspire-machine-practice) Creating SSH key...
+(aspire-machine-practice) Starting the VM...
+(aspire-machine-practice) Check network to re-create if needed...
+(aspire-machine-practice) Windows might ask for the permission to configure a dhcp server. Sometimes, such confirmation window is minimized in the taskbar.
+(aspire-machine-practice) Waiting for an IP...
+Waiting for machine to be running, this may take a few minutes...
+Detecting operating system of created instance...
+Waiting for SSH to be available...
+Detecting the provisioner...
+Provisioning with boot2docker...
+Copying certs to the local machine directory...
+Copying certs to the remote machine...
+Setting Docker configuration on the remote daemon...
+Checking connection to Docker...
+Docker is up and running!
+To see how to connect your Docker Client to the Docker Engine running on this virtual machine, run: C:\Program Files\Docker Toolbox\docker-machine.exe env aspire-machine-practice
+	
+- eval $(docker-machine env <machine_name>)
+   eval $(docker-machine env aspire-machine-practice)
+
+  This command will connect to the machine_name mentioned. All the work you do will be on
+  this machine
+
+  > docker images ls
+  > docker containers ls
+  Once a new docker-machine is created, the above two commands will always display empty results as no images and containers are configured
+
+- docker-machine start aspire-machine-online
+  This command is used to just start  the docker machine. Whereas eval $(docker-machine env aspire-machine-online), this connects you to this docker machine.
+
+- docker ip <docker-machine>
+  displays the IP Address of the docker machine
+
+- docker image build --file=<docker_file_name> --tag=<image_name>:<image_version> .
+  ex: docker image build --file=DockerFile --tag=helloworldstandalone:1.0 .
+
+  the image name should always be in lowercase, if you enter in any other case (camelcase or uppercase) the image will not be built and the docker client reports an error regarding the same
+
+  the . at the end of the command is also requried other it throws an error as below
+  ===== docker image build requires exactly 1 argument =====
+
+- docker container run --name <container_name> <image_name>:<tag>
+  here "image_name" and "tag" is the name of the image and the tag from which the container will be created
+
