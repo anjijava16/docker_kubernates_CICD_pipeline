@@ -25,5 +25,80 @@ git log
 git push
 
 
+git difftool HEAD
 
+
+hun=input("are u hundry")
+if hun=="yes":
+  print ("")
+else:
+ print (" ")
  
+ 
+ git checkout -- abc.txt   (Update in git code)
+ Checkout specific file
+ 
+ git checkout -- .
+ (Checkout new code all files)
+ 
+
+ git add addFileName
+ 
+ git commit -m 'aadd'
+ 
+ ====================================
+ 
+ git revert commidID
+ 
+ git rever ID
+ 
+ EX: git revert 43cd08c991833115a35045c42f4b40b171c85408
+
+
+git revert -n  43cd08c991833115a35045c42f4b40b171c85408
+
+
+git reset -hard commid_id
+
+
+Branches Codes ::==>>
+
+git branch
+ by default it is master.
+ 
+ // Creating a branch
+  git branch dev1
+
+// changing the branch
+git checkout dev1
+
+
+2081  git push
+ 2082  git checkout dev1
+ 2083  git checkout master
+ 2084  git merge dev1
+ 2085  git merge master
+ 2086  git push dev1
+ 2087  git push
+ 2088  git checkout dev1
+ 2089  git push
+ 2090  git push --set-upstream origin dev1
+ 
+ 
+ Creating branch:  git checkout -b dummy
+ 
+
+// Deleting the branch
+git branch -d dummy 
+
+
+
+git branch // list of the branches
+git branch xyz // create a new branch with name xyz
+git checkout xyz // make xyz an actie branch
+git checkout -b mybran : create new branch and active it
+git merge xyz ---Merge xyz into current branch
+git branch -d xyz --delete xyz branch
+
+
+
