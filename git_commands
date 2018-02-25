@@ -20,5 +20,10 @@ git add fileName
 
 git commit -m 'first version of code'
 
+git log 
+
+git push
+
+
 
  
