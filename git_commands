@@ -100,5 +100,12 @@ git checkout -b mybran : create new branch and active it
 git merge xyz ---Merge xyz into current branch
 git branch -d xyz --delete xyz branch
 
+================================
+
+ git push -u origin master
+ get remote add origin https://github.com/anjijava16/Aws_Dev_Utils.git
+  git push -u origin master
+  
+
 
 
