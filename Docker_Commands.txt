@@ -1,5 +1,7 @@
 - docker version
 	two section client and server. server is always linux
+-- How to run MYSQL in Docker:
+	sudo docker run -p 3306:3306 -e MYSQL_ROOT_PASSWORD=root -d mysql:latest
 
 - docker info
 	displays key/value pair of docker details. Like Number of containers, name etc
