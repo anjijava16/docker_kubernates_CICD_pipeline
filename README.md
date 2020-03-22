@@ -1,14 +1,8 @@
 # DockerSetup 
-# Docker Hub Creation :: https://hub.docker.com/r/anjaiahspr/welcomedocker/  : docker pull anjaiahspr/welcomedocker
-# Docker Hub 2nd Exmple (https://hub.docker.com/r/anjaiahspr/java-app/  : docker pull anjaiahspr/java-app
-# Docker Execution On EC2 Servers 
 
-
-Docker Insall on Ubuntu 
-
+# Docker Insall on Ubuntu 
 
 sudo apt-get remove docker docker-engine docker.io containerd runc
-
 
 sudo apt-get update
 
@@ -22,10 +16,12 @@ sudo apt-get update
 
 sudo apt-get install docker-ce docker-ce-cli containerd.io
 
+# Docker Version
+
 docker -v
 
 
-
+# Docker Test (After install the above commands)
 sudo docker run hello-world
 
 
@@ -85,3 +81,13 @@ Here docker is running :
  docker run -d -p 8080:8080 -v /path/to/dags/on/your/local/machine/:/usr/local/airflow/dags  puckel/docker-airflow webserver
 
 docker run -d -p 8080:8080 -v /home/welcome/Desktop/imp/Airflow/:/usr/local/airflow/dags  puckel/docker-airflow webserver
+
+
+# Docker Hub Creation 
+  https://hub.docker.com/r/anjaiahspr/welcomedocker/  : 
+  docker pull anjaiahspr/welcomedocker
+
+
+# Docker Hub Exmple-2 
+     https://hub.docker.com/r/anjaiahspr/java-app/ 
+     docker pull anjaiahspr/java-app
