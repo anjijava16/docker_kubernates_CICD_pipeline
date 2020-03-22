@@ -82,6 +82,11 @@ Here docker is running :
 
 docker run -d -p 8080:8080 -v /home/welcome/Desktop/imp/Airflow/:/usr/local/airflow/dags  puckel/docker-airflow webserver
 
+# Docker on Airflow URL
+
+http://localhost:8080/admin/?showPaused=True
+
+
 
 # Docker Hub Creation 
   https://hub.docker.com/r/anjaiahspr/welcomedocker/  : 
