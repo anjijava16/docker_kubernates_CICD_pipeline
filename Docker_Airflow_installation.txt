@@ -10,5 +10,7 @@ docker exec -ti 4f1170d49d7e bash
 Here docker is running :
  /usr/local/airflow/dags
  
+ https://towardsdatascience.com/getting-started-with-airflow-using-docker-cd8b44dbff98
+ 
  https://www.mikulskibartosz.name/how-to-run-airflow-in-docker/
  
