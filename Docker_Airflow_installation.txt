@@ -1,0 +1,14 @@
+docker pull anjaiahspr/docker-airflow
+
+docker run -d -p 8080:8080 anjaiahspr/docker-airflow
+
+ docker run -d -p 8080:8080 -v /home/welcome/Desktop/imp/Airflow/:/usr/local/airflow/dags/ anjaiahspr/docker-airflow
+ 
+ 
+docker exec -ti 4f1170d49d7e bash
+
+Here docker is running :
+ /usr/local/airflow/dags
+ 
+ https://www.mikulskibartosz.name/how-to-run-airflow-in-docker/
+ 
