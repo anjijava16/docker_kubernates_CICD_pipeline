@@ -20,7 +20,14 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io
 
 docker -v
 
-
+	     
+## Add Docker user 		 
+  sudo groupadd docker
+# Add user to docker Group 
+  sudo usermod -aG docker $USER
+# Test Hello world container 
+   docker container run hello-world
+ 
 # Docker Test (After install the above commands)
 sudo docker run hello-world
 
