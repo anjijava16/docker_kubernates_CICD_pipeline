@@ -1,0 +1,162 @@
+Docker 
+
+Docker MicroService Example
+
+							 Position Simulator (Miroservice)
+							   |
+							   |
+							 ActiveMQ
+                               |
+							   |
+WebFrontEnd ---> Position Tracking 	 
+
+## Adding Profiles 
+java -Dspring.profiles.active=development -jar fleetman-0.1.SNAPSHOT.jar 
+
+
+Docker Container 
+
+java ---> Apache Tomcat NGINX +
+
+WAR   Environment variable 
+
+
+Docker Image ---> run1 ---> Container (Running)
+                           run2 ---> Conainer (Running)
+
+
+Container : Not Full Operationg System 
+              : It is process on OS 
+			  
+
+Linux Kernel ----> 
+         Memory Managment
+		 
+	     
+## Add Docker user 		 
+sudo groupadd docker
+# Add user to docker Group 
+sudo usermod -aG docker $USER
+
+ docker container run hello-world
+ 
+ 
+ 
+ docker image pull virtualpairprogrammers/fleetman-webapp
+ 
+ Status: Downloaded newer image for virtualpairprogrammers/fleetman-webapp:latest
+docker.io/virtualpairprogrammers/fleetman-webapp:latest
+welcome@welcome-Inspiron-5558:~$ 
+
+docker container run -p 8080:8080 virtualpairprogrammers/fleetman-webapp
+
+docker container ls
+
+docker container stop 4C
+
+
+docker container run -p 8080:8080 virtualpairprogrammers/fleetman-webapp
+           First Port : Externa;
+		   Second Port : Internal Port 
+		   
+docker container run -p 80:8080 virtualpairprogrammers/fleetman-webapp		   : Default port http://localhost 
+
+
+
+
+
+
+
+How to push docker file to hub
+$docker images
+
+$ docker tag tomcat anjaiahspr/tomcat:8
+$ docker push anjaiahspr/tomcat:8
+welcome@welcome-Inspiron-5558:~$ docker images
+REPOSITORY                               TAG                           IMAGE ID            CREATED             SIZE
+myjdkimage                               latest                        a11e8dd15300        5 minutes ago       64.2MB
+welcome@welcome-Inspiron-5558:~$ docker tag myjdkimage anjaiahspr/myjdkimage:8
+welcome@welcome-Inspiron-5558:~$ docker push anjaiahspr/myjdkimage:8
+
+The push refers to repository [docker.io/anjaiahspr/myjdkimage]
+
+
+
+
+
+
+
+
+
+
+
+Managing Images 
+
+
+Ubunut ---> java ----> APP(COntainer)
+docker pull ubuntu
+
+docker pull ubuntu
+docker image pull ubuntu
+docker ps
+docker ps -a
+docker container ls
+docker container ls -a
+docker image ls
+
+
+docker container --help
+docker image --help
+
+docker container run ubuntu
+
+docker container run ubuntu
+
+## Install Ubunutu (Connect)
+docker container run -it ubuntu
+
+apt-get update && apt-get install git
+
+
+docker container run -p 80:8080 virtualpairprogrammers/fleetman-webapp
+
+## Delete Container 
+docker container rm 42  (Remove container )
+docker container ls -a
+docker container prune  (Delete all container files)
+
+
+## Docker container backgroupd 
+docker container run -d -p 80:8080 virtualpairprogrammers/fleetman-webapp
+// -d, --detach                         Run container in background and print container ID
+
+docker container logs 7 (See the backgroud Logs 
+docker container logs -f 7
+
+docker container exec bash 
+
+docker container exec 76 bash
+docker container exec -it 76 bash
+
+
+## Specific Version
+docker container run -d -p 80:8080 tomcat
+docker container run -d -p 80:8080 tomcat:8.5.16-jre8-aplne
+
+docker image pull tomcat 
+docker container run -d -p 80:8080 tomcat
+docker image pull tomcat:8.5.53-jdk14-openjdk-oracle
+docker container logs -f 01
+
+# Tomcat Installation Specific Version not like Latest one 
+$ docker image pull tomcat:8.0-alpine
+$ docker container run -d -p 80:8080 tomcat:8.0-alpine
+
+  
+
+
+
+
+
+
+
