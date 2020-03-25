@@ -1,0 +1,11 @@
+ 
+ 
+ docker pull ubuntu
+ docker container run -it ubuntu
+ apt-get update
+ apt-cache search jdk8
+apt-get install -y openjdk-8-jdk
+
+
+ docker container commit -a "Anjaiahspr anjaiahspr@gmail.com" 5b myjdkimage
+ 
