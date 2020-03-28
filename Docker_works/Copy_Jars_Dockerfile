@@ -1,0 +1,12 @@
+FROM ubuntu:latest
+
+MAINTAINER Anjaiah Methuku "anjaiahspr@gmail.com"
+
+RUN apt-get update && apt-get install -y openjdk-8-jdk
+
+
+WORKDIR /usr/local/bin/
+
+COPY test-program.jar .
+
+CMD ["/bin/bash"]
