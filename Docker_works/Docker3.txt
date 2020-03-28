@@ -9,3 +9,78 @@ apt-get install -y openjdk-8-jdk
 
  docker container commit -a "Anjaiahspr anjaiahspr@gmail.com" 5b myjdkimage
  
+ 
+  
+ 
+ docker pull ubuntu
+ docker container run -it ubuntu
+ apt-get update
+ apt-cache search jdk8
+apt-get install -y openjdk-8-jdk
+
+
+ docker container commit -a "Anjaiahspr anjaiahspr@gmail.com" 5b myjdkimage
+
+
+## How to run Docker File : 
+docker image build -t jdk-image-from-dockerfile .
+
+
+
+
+
+FROM ubuntu:latest
+
+
+
+MAINTAINER Richard Chesterwood "contact@virtualpairprogrammers.com"
+
+
+
+RUN apt-get update && apt-get install -y openjdk-8-jdk
+
+
+
+WORKDIR /usr/local/bin/
+
+COPY test-program.jar /usr/local/bin/
+
+
+ADD test-program.jar .
+
+
+
+ENTRYPOINT ["java", "-jar", "test-program.jar"]
+
+
+Once run the below command
+docker container run -it jdk-image-from-dockerfile
+
+It will go to the //usr/local/bin location
+
+
+ docker container start 43
+ docker container logs -f 43
+ 
+ Copy VS ADD  ??
+ 
+ ENTRYPOINT : ENTRYPOINT ["java","-jar","test-program.jar"]===> IT MUST run the entry point command
+ CMD:  docker container run -it jdk-image-from-dockerfile /bin/bash===> it will direct open /bin/bash command 
+ VM Arguments :   -Dspring.profiles.active=development
+ Propeties file must be application-development.properties
+ 
+ 
+ 
+ 
+ Basic Dockerfile
+ 
+ 
+ FROM ubuntu:latest
+ 
+ 
+ docker image build -t fleetman-webapp .
+ 
+ docker-machine ip
+ 
+ 
+ 
