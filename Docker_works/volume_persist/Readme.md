@@ -12,3 +12,17 @@
  docker volume inspect mydata
  docker volume ps 
  
+ 
+ welcome@welcome-Inspiron-5558:~/Desktop/Docker/Code/Chapter 7/fleetman-webapp$ docker volume inspect mydata
+[
+    {
+        "CreatedAt": "2020-03-29T01:16:34-04:00",
+        "Driver": "local",
+        "Labels": null,
+        "Mountpoint": "/var/snap/docker/common/var-lib-docker/volumes/mydata/_data",
+        "Name": "mydata",
+        "Options": null,
+        "Scope": "local"
+    }
+]
+
