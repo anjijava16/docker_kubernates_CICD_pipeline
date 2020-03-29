@@ -1,4 +1,26 @@
-	<build>
+
+# Note: if we don't want add username and password in  the pom.xml then we  need to add these creds inside the settings.xml file 
+
+# Example 
+```
+<settings xmlns=""
+           xmlns:xsi=""
+	   xsi:schemaLocation=" "
+	   >
+<servers>
+<server>
+   <id>docker.io</id>
+   <username>anjaiahspr</username>
+   <password>xxxxxx</password>
+</server>
+</servers>
+</settings>
+```
+# Below is the Maveen plugn adding docker username and password in pom.xml:
+
+# Example  
+```
+<build>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
@@ -65,3 +87,5 @@
 		
 	</build>
 	
+```
+
