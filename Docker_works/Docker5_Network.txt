@@ -1,0 +1,39 @@
+docker container run -e MYSQL_ROOT_PASSWORD=password -d mysql:5
+
+docker container exec -it 4f bash 
+
+mysql -uroot -ppassword
+
+create database employeedb
+use employeedb
+
+
+docker container run -e MYSQL_ROOT_PASSWORD=password -e MYSQL_DATABASE=fleetman -d mysql:5
+
+
+## Docker network
+bridge : not allowed continer to container 
+host 
+
+docker network ls
+docker network create my-network 
+
+docker container run --network my-network --name database -e MYSQL_ROOT_PASSWORD=password -e MYSQL_DATABASE=fleetman -d mysql:5
+
+
+docker container run -d -p 80:8080 --network my-network --name fleetman-webapp  fleetman-webapp
+
+docker container exec -it fleetman-webapp sh
+
+
+docker container stop fleetman-webapp
+
+docker container run -d -p 80:8080 --network my-network --name fleetman-webapp  --rm fleetman-webapp fleetman-webapp 
+
+docker container run -tit --network my-network alpie
+
+ docker container run -it --network my-network alpine
+ 
+ apk add --no-cache mysql-client
+ 
+ mysql -uroot -ppassword -hdatabase
