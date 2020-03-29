@@ -1,0 +1,58 @@
+docker volume --help
+docker volume create my-volume
+docker volume ls
+docker volume inspect my-volume
+docker volume rm my-volume
+docker volume ls
+docker pull jenkins
+docker run -p 8080:8080 -p 50000:50000 jenkins 
+docker run --name MyJenkins -v myvol1:/var/jenkins_home -p 8080:8080 -p 50000:50000 jenkins 
+
+
+Docker Volume :
+
+Host :
+   Virtal File System ===-> Container : /var/lib/mysql/data ===> Virtual File System 
+   Host File System ====>                   /home/myuser/data 
+   
+   3 Types Docker Volume Types 
+     i. docker run  -v /home/myuser/data:/var/lib/mysql/data
+	                                   Host Volumes   Contianer Volume(Virtaul File System)
+									   
+      ii  docker run -v /var/lib/mysql/data  (Anonymous volumes Automtically created by Docker) 
+
+     iii. docker run -v name:/var/lib/mysql/data
+	                            Named Volumes 
+								
+								
+Docker compose volumes 
+    version: "3"
+	services:
+	    mongodb:
+		     image: mongo
+			 ports:
+			 - 27017:27017
+			 
+			 volumes:
+			    -db-data:/var/lib/mysql/data         ===> Named Volumes 
+				
+	volumes:
+        d	
+ 	 
+   
+
+localhost:8080
+978bea47475d4ed7a1679c1718ac5482
+
+
+
+Create 2nd Jenkins Jobs :
+ docker run --name MyJenkins2 -v myvol1:/var/jenkins_home -p 9090:8080 -p 60000:50000 jenkins
+ 
+ localhost:9090
+  User: Admin
+ Password: 978bea47475d4ed7a1679c1718ac5482
+ 
+ 
+ 3rd Job :
+ docker run --name MyJenkins3 -v /home/welcome/jenkins_home/dev:/var/jenkins_home -p 9191:8080 -p 40000:50000 jenkins
