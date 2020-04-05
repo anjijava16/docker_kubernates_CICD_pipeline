@@ -20,6 +20,10 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io
 
 docker -v
 
+# Docker Online
+  http://labs.play-with-docker.com/
+  https://training.play-with-docker.com/
+
 	     
 ## Add Docker user 		 
   sudo groupadd docker
