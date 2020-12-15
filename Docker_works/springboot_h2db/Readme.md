@@ -73,7 +73,7 @@ ENTRYPOINT ["java","-jar","iwinner-order-services-1.0-SNAPSHOT.jar"]
 
 # Running in Kubectl file in PODS (worker)
 
-# Create and Deploy kubectl file 	Deploying Postgres with kubectl apply:
+# Create and Deploy kubectl file 	:
      kubectl apply -f iwinner-order-service.yml
 
 #  Step2: Check URL 
