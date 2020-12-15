@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: iwinner_order_service
+  labels:
+    app: iwinner_order_service
+spec:
+      containers:
+      - name: iwinner_order_service
+        image: anjaiahspr/iwinner_order_service
+        ports:
+        - containerPort: 8080
