@@ -44,7 +44,7 @@ ENTRYPOINT ["java","-jar","iwinner-order-services-1.0-SNAPSHOT.jar"]
     docker images
     iwinner_order_service         latest       0e589c000ce1   17 seconds ago   566MB
 
-#  Step4: Create tag our docker images 
+#  Step4: Create tag our docker image
     docker tag iwinner_order_service anjaiahspr/iwinner_order_service
 
 # Step 5: Push to docker hub 
