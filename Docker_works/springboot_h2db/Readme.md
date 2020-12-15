@@ -32,3 +32,7 @@ ENTRYPOINT ["java","-jar","iwinner-order-services-1.0-SNAPSHOT.jar"]
 
 #  Step7: Check URL 
     http://localhost:8080/swagger-ui.html#/
+# Change port number 
+    docker run -p 8886:8080 anjaiahspr/iwinner_order_service
+    
+    
