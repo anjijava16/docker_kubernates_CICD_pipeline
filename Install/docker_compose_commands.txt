@@ -1,0 +1,112 @@
+$ docker-compose help
+Define and run multi-container applications with Docker.
+
+Usage:
+  docker-compose [-f <arg>...] [options] [--] [COMMAND] [ARGS...]
+  docker-compose -h|--help
+
+Options:
+  -f, --file FILE             Specify an alternate compose file
+                              (default: docker-compose.yml)
+  -p, --project-name NAME     Specify an alternate project name
+                              (default: directory name)
+  -c, --context NAME          Specify a context name
+  --verbose                   Show more output
+  --log-level LEVEL           Set log level (DEBUG, INFO, WARNING, ERROR, CRITICAL)
+  --no-ansi                   Do not print ANSI control characters
+  -v, --version               Print version and exit
+  -H, --host HOST             Daemon socket to connect to
+
+  --tls                       Use TLS; implied by --tlsverify
+  --tlscacert CA_PATH         Trust certs signed only by this CA
+  --tlscert CLIENT_CERT_PATH  Path to TLS certificate file
+  --tlskey TLS_KEY_PATH       Path to TLS key file
+  --tlsverify                 Use TLS and verify the remote
+  --skip-hostname-check       Don't check the daemon's hostname against the
+                              name specified in the client certificate
+  --project-directory PATH    Specify an alternate working directory
+                              (default: the path of the Compose file)
+  --compatibility             If set, Compose will attempt to convert keys
+                              in v3 files to their non-Swarm equivalent (DEPRECATED)
+  --env-file PATH             Specify an alternate environment file
+
+Commands:
+  build              Build or rebuild services
+  config             Validate and view the Compose file
+  create             Create services
+  down               Stop and remove containers, networks, images, and volumes
+  events             Receive real time events from containers
+  exec               Execute a command in a running container
+  help               Get help on a command
+  images             List images
+  kill               Kill containers
+  logs               View output from containers
+  pause              Pause services
+  port               Print the public port for a port binding
+  ps                 List containers
+  pull               Pull service images
+  push               Push service images
+  restart            Restart services
+  rm                 Remove stopped containers
+  run                Run a one-off command
+  scale              Set number of containers for a service
+  start              Start services
+  stop               Stop services
+  top                Display the running processes
+  unpause            Unpause services
+  up                 Create and start containers
+  version            Show version information and quit
+
+
+$ docker-compose images
+   Container                     Repository                       Tag         Image Id       Size
+---------------------------------------------------------------------------------------------------
+broker            confluentinc/cp-server                      6.0.1         f5157ccd6f14   1.242 GB
+connect           cnfldemos/cp-server-connect-datagen         0.4.0-6.0.1   41fbd90978c3   1.66 GB
+control-center    confluentinc/cp-enterprise-control-center   6.0.1         a594d1370904   973.4 MB
+ksql-datagen      confluentinc/ksqldb-examples                6.0.1         9bd6264c6a39   741.6 MB
+ksqldb-cli        confluentinc/cp-ksqldb-cli                  6.0.1         f99d764f9732   778.4 MB
+ksqldb-server     confluentinc/cp-ksqldb-server               6.0.1         2b67d82adcc1   1.064 GB
+rest-proxy        confluentinc/cp-kafka-rest                  6.0.1         9805cb6230d7   1.273 GB
+schema-registry   confluentinc/cp-schema-registry             6.0.1         c7dfd2529fe3   1.336 GB
+zookeeper         confluentinc/cp-zookeeper                   6.0.1         0667a7f01cf0   714.4 MB
+
+anjai@DESKTOP-25T44JJ MINGW64 /c/Tech_Learn_welcome/Kubernates/confluent_kafka/cp-all-in-one/cp-all-in-one (6.0.1-post)
+$ docker images -a
+REPOSITORY                                  TAG           IMAGE ID       CREATED        SIZE
+my_centsos_entrypoint                       latest        e655b91b9160   5 hours ago    269MB
+my_centsos_image                            latest        3ad14057c3b1   5 hours ago    269MB
+employee-jdbc                               latest        bb22c20bc7a9   31 hours ago   530MB
+mysql                                       8             ab2f358b8612   7 days ago     545MB
+my_cents_java_env                           latest        aa98918b796c   10 days ago    209MB
+cnfldemos/cp-server-connect-datagen         0.4.0-6.0.1   41fbd90978c3   2 weeks ago    1.66GB
+confluentinc/cp-server                      6.0.1         f5157ccd6f14   3 weeks ago    1.24GB
+confluentinc/ksqldb-examples                6.0.1         9bd6264c6a39   3 weeks ago    742MB
+confluentinc/cp-zookeeper                   6.0.1         0667a7f01cf0   3 weeks ago    714MB
+confluentinc/cp-ksqldb-server               6.0.1         2b67d82adcc1   3 weeks ago    1.06GB
+confluentinc/cp-ksqldb-cli                  6.0.1         f99d764f9732   3 weeks ago    778MB
+confluentinc/cp-schema-registry             6.0.1         c7dfd2529fe3   3 weeks ago    1.34GB
+confluentinc/cp-kafka-rest                  6.0.1         9805cb6230d7   3 weeks ago    1.27GB
+confluentinc/cp-enterprise-control-center   6.0.1         a594d1370904   3 weeks ago    973MB
+
+anjai@DESKTOP-25T44JJ MINGW64 /c/Tech_Learn_welcome/Kubernates/confluent_kafka/cp-all-in-one/cp-all-in-one (6.0.1-post)
+$ docker ps -a
+CONTAINER ID   IMAGE                                             COMMAND                  CREATED        STATUS                     PORTS                                            NAMES
+afdb0e55677e   my_cents_java_env                                 "/bin/bash"              4 hours ago    Up 4 hours                                                                  vigorous_kirch
+86f92c61dba2   my_centsos_entrypoint                             "echo 'hi adam' /bin…"   5 hours ago    Exited (0) 5 hours ago                                                      intelligent_blackburn
+a8c15a72d341   my_centsos_entrypoint                             "echo 'hi adam'"         5 hours ago    Exited (0) 5 hours ago                                                      distracted_feynman
+9f968265d279   my_centsos_image                                  "/bin/bash"              5 hours ago    Up 5 hours                                                                  charming_chaplygin
+ca68e01729f8   confluentinc/ksqldb-examples:6.0.1                "bash -c 'echo Waiti…"   5 hours ago    Up 5 hours                                                                  ksql-datagen
+89506e8db400   confluentinc/cp-ksqldb-cli:6.0.1                  "/bin/sh"                5 hours ago    Up 5 hours                                                                  ksqldb-cli
+71750f994ae3   confluentinc/cp-enterprise-control-center:6.0.1   "/etc/confluent/dock…"   5 hours ago    Up 5 hours                 0.0.0.0:9021->9021/tcp                           control-center
+9fa3625b2e42   confluentinc/cp-ksqldb-server:6.0.1               "/etc/confluent/dock…"   5 hours ago    Up 5 hours                 0.0.0.0:8088->8088/tcp                           ksqldb-server
+4bbf87965cab   cnfldemos/cp-server-connect-datagen:0.4.0-6.0.1   "/etc/confluent/dock…"   5 hours ago    Up 5 hours                 0.0.0.0:8083->8083/tcp, 9092/tcp                 connect
+e83d45d593d6   confluentinc/cp-kafka-rest:6.0.1                  "/etc/confluent/dock…"   5 hours ago    Up 5 hours                 0.0.0.0:8082->8082/tcp                           rest-proxy
+6c987f3e044c   confluentinc/cp-schema-registry:6.0.1             "/etc/confluent/dock…"   5 hours ago    Up 5 hours                 0.0.0.0:8081->8081/tcp                           schema-registry
+51adf5e29e5f   confluentinc/cp-server:6.0.1                      "/etc/confluent/dock…"   5 hours ago    Up 5 hours                 0.0.0.0:9092->9092/tcp, 0.0.0.0:9101->9101/tcp   broker
+5e7772a6011d   confluentinc/cp-zookeeper:6.0.1                   "/etc/confluent/dock…"   5 hours ago    Up 5 hours                 2888/tcp, 0.0.0.0:2181->2181/tcp, 3888/tcp       zookeeper
+7f8741246e8c   employee-jdbc                                     "java -jar employe-j…"   31 hours ago   Exited (1) 31 hours ago                                                     employee-jdbc_employee-jdbc_1
+5ff7ff28ae1b   mysql:8                                           "docker-entrypoint.s…"   31 hours ago   Exited (255) 9 hours ago   3306/tcp, 33060/tcp                              employee-jdbc_mysqldb_1
+
+anjai@DESKTOP-25T44JJ MINGW64 /c/Tech_Learn_welcome/Kubernates/confluent_kafka/cp-all-in-one/cp-all-in-one (6.0.1-post)
+$
