@@ -1,13 +1,11 @@
 
-https://www.callicoder.com/spring-boot-docker-example/
-https://www.callicoder.com/spring-boot-mysql-react-docker-compose-example/
 
-
-Kubernates:
-https://www.callicoder.com/deploy-spring-mysql-react-nginx-kubernetes-persistent-volume-secret/
-
-
-https://dzone.com/articles/all-about-hibernate-manytomany-association
+## Reference Links 
+		https://www.callicoder.com/spring-boot-docker-example/
+		https://www.callicoder.com/spring-boot-mysql-react-docker-compose-example/
+		Kubernates:
+		https://www.callicoder.com/deploy-spring-mysql-react-nginx-kubernetes-persistent-volume-secret/
+		https://dzone.com/articles/all-about-hibernate-manytomany-association
  
  
 ## GIT Setup 
@@ -82,7 +80,8 @@ https://dzone.com/articles/all-about-hibernate-manytomany-association
 # Volume 
 		docker run --detach --env MYSQL_ROOT_PASSWORD=dummypassword --env MYSQL_USER=todos-user --env MYSQL_PASSWORD=dummytodos --env MYSQL_DATABASE=todos --name mysql --publish 3306:3306 --network=web-application-mysql-network --volume mysql-database-volume:/var/lib/mysql  mysql:5.7
 
-##PUSH 
+
+#PUSH 
 		docker push anjaiahspr/todo-web-application-mysql:0.0.1-SNAPSHOT
 		docker create volume data 
 		docker run -it --name=example1 --mount source=data,destination=/data ubuntu
