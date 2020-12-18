@@ -1,4 +1,4 @@
-# Kubernates (ADAM) Setup Here 
+# Kubernates (KUBEADAM) Setup Here 
 
 # Step 1 – Update Ubuntu and install apt-transport-https
 		sudo apt-get update
@@ -42,23 +42,19 @@
 			
 	
 # Step 6 – Setup Workstation in the Master node only. You can be regular user for it.
-
-
 		$ mkdir -p $HOME/.kube
 		$ sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
 		$ sudo chown $(id -u):$(id -g) $HOME/.kube/config
 
-
-
-
 # Step 8 – Install Kubernetes pod networking
-
 		kubectl apply -f "https://cloud.weave.works/k8s/net?k8s-version=$(kubectl version | base64 | tr -d '\n')"
 		kubectl get nodes
 		kubectl get pods --all-namespaces
 		kubectl get nodes
 
+
 # Worker System(NODE) 
+
 # Step 9 – Setup nodes [ In the node aka worker ]
 
 		Follow Step 1 
