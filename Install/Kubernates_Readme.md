@@ -16,9 +16,9 @@
 
 # Step 3 – Install docker kubeadm kubectl kubelet kubernetes-cni
 
-	apt-get update
-	apt-get install -y docker.io kubeadm kubectl kubelet kubernetes-cni
-	apt-get install -y docker.io kubeadm kubectl kubelet kubernetes-cni
+	sudo apt-get update
+	sudo apt-get install -y docker.io kubeadm kubectl kubelet kubernetes-cni
+	sudo apt-get install -y docker.io kubeadm kubectl kubelet kubernetes-cni
 
 
 # Step4:Finally, initialize a kubernetes clusters
