@@ -2,12 +2,11 @@
 
 
 # 1.Run a container
-		docker run -it --rm -p 8888:8888 jupyter/pyspark-notebook
+			docker run -it --rm -p 8888:8888 jupyter/pyspark-notebook
 		
 
-#2. Connect to a Jupyter notebook
-     # Copy/paste this URL into your browser (if the first)
-		http://localhost:8888/?token=e144d004f6652ae6406a78adf894621e62fdeb1fc57d02e8		
+# 2. Connect to a Jupyter notebook
+			http://localhost:8888/?token=e144d004f6652ae6406a78adf894621e62fdeb1fc57d02e8		
 
 
 
@@ -15,6 +14,7 @@
 	docker exec -it simple-spark-etl_cassandra_1 bash
 	docker exec -it 3975782c9e10 bash
 	cqlsh --user cassandra --password cassandra
+	
 	```
 	CREATE KEYSPACE school WITH replication = { 'class' : 'SimpleStrategy' , 'replication_factor' : '1' }; 
 	
@@ -28,6 +28,7 @@
     something_important int,
     PRIMARY KEY (name, surname) 
 	);
+	
 ```
 
 # MYSQL Login 
