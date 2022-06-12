@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: api-pod
+  name: api-pod-python
   labels:
-    run: connectApi
+    run: connectApiPython
 spec:
   containers:
     - name: client
-      image: jamescalam/hello-api
+      image: anjaiahspr/hello-api-python
       ports:
         - containerPort: 3000
