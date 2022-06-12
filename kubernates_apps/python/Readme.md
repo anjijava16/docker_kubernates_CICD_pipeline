@@ -27,6 +27,9 @@ docker tag 3aeaa19c2897 anjaiahspr/hello-api.
 
 # Config file
 1. To create a pod, we need nothing more than a YAML file:
+
+# Services
+1. We use services to set up networking in our clusters. There are several types of services that control networking in different ways. The one that we will be using is a NodePort.
   
   
   
